@@ -1,0 +1,249 @@
+
+.container {
+  background: blue; 
+}
+
+
+
+/* 预约信息 */
+.locationMessage {
+  width: 100%;
+}
+.content {
+  padding: 0rpx 40rpx 0rpx 40rpx;
+  /* background: red; */
+}
+
+.appointmentsNumber,
+.playTime {
+  padding-left: 10rpx;
+  font-size: 23rpx;
+  color: white;
+}
+
+.chooseTime {
+  display: flex;
+  justify-content: space-between;
+}
+.chooseTime view {
+  width: 45%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: white;
+}
+
+.chooseLocation {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+  width: 100%;
+  height: 300rpx;
+}
+
+.chooseLocation view {
+  width: 30%;
+  height: 60rpx;
+  background: white;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 18rpx;
+}
+
+
+
+/* 个人信息登记 */
+.personalInfomation {
+  width: 100%;
+  padding: 0rpx 20rpx 20rpx 20rpx;
+  /* background: blue; */
+}
+
+.enterName {
+  /* background: red; */
+}
+.name {
+  color: white;
+}
+.inputName {
+  width: 70%;
+  border-radius: 5rpx;
+  margin-left: 20rpx;
+  padding-left: 10rpx;
+  background: white;
+}
+.prompt {
+  font-size: 20rpx;
+  color: white;
+}
+.selectNumber {
+  margin-top: 10rpx;
+  /* background: red; */
+}
+.card {
+  color: white;
+}
+.certificateType {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: 20rpx;
+}
+.certificateType .chinaCard {
+  width: 240rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 25rpx;
+  border-radius: 5rpx;
+  background: white;
+}
+.certificateType .otherCard {
+  margin-left: 10rpx;
+  width: 160rpx;
+  height: 40rpx;
+  font-size: 25rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  background: white;
+}
+.certificateType .enterOtherCard {
+  margin-top: 7rpx;
+  width: 456rpx;
+  background: white;
+  border-radius: 5rpx;
+}
+.certificateType .identifyCard {
+  margin-top: 10rpx;
+  width: 300rpx;
+  height: 40rpx;
+  font-size: 25rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  background: white;
+}
+.inputRule {
+  font-size: 22rpx;
+  color: white;
+}
+
+.phoneNumber {
+  font-size: 24rpx;
+  color: white;
+}
+.enterPhone input{
+  width: 70%;
+  border-radius: 5rpx;
+  background: white;
+}
+
+
+
+
+/* 特殊的class类名 */
+.active {
+  color: blue;
+}
+/* 输入框显示 */
+.inputUp {
+  display: block;
+}
+/* 输入框隐藏 */
+.inputDown {
+  display: none;
+}
+
+
+
+.confirm {
+  padding: 0rpx;
+  margin-top: 10rpx;
+  width: 300rpx;
+  height: 66rpx;
+  border-radius: 5rpx;
+  line-height: 66rpx;
+  text-align: center;
+}
+
+
+
+
+/* 自定义弹窗 */
+.popupWindow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 80%;
+  /* height: 400rpx; */
+  padding-bottom: 40rpx;
+  background: purple;
+}
+.otherArea {
+  font-size: 16rpx;
+  color: gray;
+  padding-left: 10rpx;
+}
+.comfirmInfomation {
+  display: flex;
+  flex-wrap: wrap;
+  background: red;
+}
+.comfirmTourist,
+.comfirmArea {
+  padding-left: 10rpx;
+  font-size: 26rpx;
+}
+.confirmName,
+.comfirmPhone,
+.confirmCard,
+.comfirmTime {
+  padding: 10rpx;
+  font-size: 26rpx;
+  height: 30rpx;
+}
+.confirmName {
+  width: 200rpx;  
+}
+.comfirmPhone {
+  width: 300rpx;
+}
+.confirmCard {
+  width: 600rpx;
+}
+.comfirmTime {
+  width: 600rpx;
+}
+
+
+.confirmMessage {
+  text-align: center;
+  font-size: 37rpx;
+}
+
+.promiseMessage{
+  padding: 0rpx 20rpx 0rpx 10rpx;
+  font-size: 16rpx;
+  font-weight: bold;
+}
+
+
+.comfirmReport {
+  width: 100rpx;
+  border: 1rpx solid blue;
+  color: blue;
+  padding: 0;
+}
+.closeBtn {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  padding: 10rpx;
+  border-radius: 50%;
+  background: red;
+}

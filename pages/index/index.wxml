@@ -1,0 +1,108 @@
+<!--index.wxml-->
+<view class="container">
+
+    
+    <view class="header">
+        
+    </view>
+
+
+    <!-- 预约信息  -->
+    <view class="locationMessage">
+      <view class="appointmentsNumber">目前所选景区可预约人数： 10</view>
+      <view class="playTime">游玩时间</view>
+      
+      <view class="section">
+        <view class="section__title">日期选择器</view>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            当前选择: {{date}}
+          </view>
+        </picker>
+      </view>
+      
+      <view class="content">
+        <view class="chooseTime"  bindtap="checkTime">
+          <view data-text="10:00-14:00" data-index="1" class="{{timeNum == 1 ? 'active': ''}}" bindtap="addTimeClass">10:00-14:00</view>
+          <view data-text="14:00-18:00" data-index="2" class="{{timeNum == 2 ? 'active': ''}}" bindtap="addTimeClass">14:00-18:00</view>
+        </view>
+        <view class="chooseLocation">
+          <view data-index="1" class="{{locationNum == 1 ? 'active': ''}}" bindtap="addLocationClass" data-location="玫瑰海岸文化旅游度假区">玫瑰海岸文化旅游度假区</view>
+          <view data-index="2" class="{{locationNum == 2 ? 'active': ''}}" bindtap="addLocationClass" data-location="沙鱼涌文化旅游区">沙鱼涌文化旅游区</view>
+           <view data-index="3" class="{{locationNum == 3 ? 'active': ''}}" bindtap="addLocationClass" data-location="金沙湾沙滩">金沙湾沙滩</view>
+           <view data-index="4" class="{{locationNum == 4 ? 'active': ''}}" bindtap="addLocationClass" data-location="艺象.IDtown国际艺术园区">艺象.IDtown国际艺术园区</view>
+           <view data-index="5" class="{{locationNum == 5 ? 'active': ''}}" bindtap="addLocationClass" data-location="大鹏所城文化旅游区">大鹏所城文化旅游区（大鹏所城丶较尾场）</view>
+          <view data-index="6" class="{{locationNum == 6 ? 'active': ''}}" bindtap="addLocationClass" data-location="西涌海滨浴场">西涌海滨浴场</view>
+           <view data-index="7" class="{{locationNum == 7 ? 'active': ''}}" bindtap="addLocationClass" data-location="东涌海滨浴场">东涌海滨浴场</view>
+          <view data-index="8" class="{{locationNum == 8 ? 'active': ''}}" bindtap="addLocationClass" data-location="东涌海滨浴场">杨梅坑</view>
+           <view data-index="9" class="{{locationNum == 9 ? 'active': ''}}" bindtap="addLocationClass" data-location="其他区域">其他区域</view>
+        </view>
+      </view>
+     
+    </view>
+
+
+   <!-- 个人信息登记 -->
+    <view class="personalInfomation">
+      <view class="enterName">
+        <text class="name">姓名</text>
+        <input type="text" class="inputName" bindblur="bindNameBlur" />
+        <text class="prompt">提示：每位预约的游客只能携带一名16岁以下未成年进入景区</text>
+      </view>
+
+      <view class="selectNumber">
+        <text class="card">证件号码</text>
+        <view class="certificateType">
+          <view data-index="1" class="chinaCard {{cardNum == 1 ? 'active': ''}}" bindtap="addCardClass">中国大陆居民身份证</view>
+          <view data-index="2" class="otherCard {{cardNum == 2 ? 'active': ''}}" bindtap="addCardClass">其他证件</view>
+          <input type="text" class="enterOtherCard {{cardNum == 2 ? 'inputUp': 'inputDown'}}" bindblur="bindNameBlur" />
+          <view data-index="3" class="identifyCard {{cardNum == 3 ? 'active': ''}}" bindtap="addCardClass">拍照识别身份证</view>
+          <view class="inputRule">
+            <view>中国大陆居民身份证需持有效身份证，港澳台及外国游客需持有其他有效身份证证明文件（如港澳居民来往内地通行证丶护照等）</view>
+            <view>请认真填写准确信息，否则可能导致预约失效</view>
+            <view>无法识别身份证的，请点击“输入其他证件”输入身份证号</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="enterPhone"> 
+        <text class="phoneNumber" >联系电话</text>
+        <input bindblur="bindPhoneBlur"/>
+      </view>
+
+      <button class="confirm " bind:tap="comfirm">确认预约</button>
+    
+    </view>
+  
+
+
+    <!-- 自定义弹窗 -->
+    <view class="popupWindow" hidden="{{hiddenmodalput}}">
+      <view class="confirmMessage">确认信息</view>
+      <view class="comfirmTourist">
+        <text>预约类型：</text>
+        <text>游客</text>
+      </view>
+
+       <view class="comfirmArea">
+        <text>预约景区：</text>
+        <text>{{touristLocation}}</text>
+      </view>
+
+      <view class="otherArea">除已开放景区外的其它区域</view> 
+      
+      <view class="comfirmInfomation">
+        <view class="confirmName">姓名：{{touristName}}</view>
+        <view class="comfirmPhone">联系电话：{{touristPhoneNumber}}</view>
+        <view class="confirmCard">证件号码：{{touristCardNumber}} </view>
+        <view class="comfirmTime">游玩时间：{{date}}  {{periodTime}} </view>
+      </view>
+      
+      <view class="promiseMessage">为保障广大游客的安全，本人承诺所填写的内容真实点丶完整丶如有不实由本人承担相关法律责任</view>
+
+      <button class="comfirmReport">确认报备</button>
+      <view class="closeBtn" bindtap="closeWindow">x</view>
+    </view>
+
+   
+</view>

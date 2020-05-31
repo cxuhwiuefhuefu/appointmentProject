@@ -3,6 +3,4 @@
         <image src="../../images/header.jpg" class="reportBg"></image>
     </view>
     <view class="record">暂无出行报备记录</view>
-
-
 </view>

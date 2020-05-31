@@ -3,7 +3,8 @@
 
     
     <view class="header">
-        
+        <image src="../../images/header.jpg"></image>
+        <view class="record" bindtap="toRecord">报备记录</view>
     </view>
 
 
@@ -13,10 +14,9 @@
       <view class="playTime">游玩时间</view>
       
       <view class="section">
-        <view class="section__title">日期选择器</view>
-        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <picker mode="date" value="{{date}}" start="2020-01-01" end="2025-01-01" bindchange="bindDateChange">
           <view class="picker">
-            当前选择: {{date}}
+            当前选择时间: {{date}}
           </view>
         </picker>
       </view>
@@ -55,7 +55,7 @@
         <view class="certificateType">
           <view data-index="1" class="chinaCard {{cardNum == 1 ? 'active': ''}}" bindtap="addCardClass">中国大陆居民身份证</view>
           <view data-index="2" class="otherCard {{cardNum == 2 ? 'active': ''}}" bindtap="addCardClass">其他证件</view>
-          <input type="text" class="enterOtherCard {{cardNum == 2 ? 'inputUp': 'inputDown'}}" bindblur="bindNameBlur" />
+          <input type="text" class="enterOtherCard {{cardNum == 2 ? 'inputUp': 'inputDown'}}" bindblur="bindCardBlur" />
           <view data-index="3" class="identifyCard {{cardNum == 3 ? 'active': ''}}" bindtap="addCardClass">拍照识别身份证</view>
           <view class="inputRule">
             <view>中国大陆居民身份证需持有效身份证，港澳台及外国游客需持有其他有效身份证证明文件（如港澳居民来往内地通行证丶护照等）</view>
@@ -67,10 +67,10 @@
 
       <view class="enterPhone"> 
         <text class="phoneNumber" >联系电话</text>
-        <input bindblur="bindPhoneBlur"/>
+        <input bindblur="bindPhoneBlur" />
       </view>
 
-      <button class="confirm " bind:tap="comfirm">确认预约</button>
+      <button class="confirm" bind:tap="comfirm">确认预约</button>
     
     </view>
   
@@ -100,8 +100,9 @@
       
       <view class="promiseMessage">为保障广大游客的安全，本人承诺所填写的内容真实点丶完整丶如有不实由本人承担相关法律责任</view>
 
-      <button class="comfirmReport">确认报备</button>
-      <view class="closeBtn" bindtap="closeWindow">x</view>
+      <button class="comfirmReport" style="width: 170rpx;" bindtap="comfirmReport">确认报备</button>
+      <view class="closeBtn" bindtap="closeWindow"></view>
+     
     </view>
 
    

@@ -1,7 +1,18 @@
 
 .container {
-  background: blue; 
+  background: #5346CD; 
 }
+
+/* 头部 */
+.record {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 10rpx 0 10rpx;
+  font-size: 23rpx;
+  color: #FFFFFF;
+}
+
 
 
 
@@ -10,7 +21,7 @@
   width: 100%;
 }
 .content {
-  padding: 0rpx 40rpx 0rpx 40rpx;
+  padding: 20rpx 40rpx 0rpx 40rpx;
   /* background: red; */
 }
 
@@ -18,7 +29,20 @@
 .playTime {
   padding-left: 10rpx;
   font-size: 23rpx;
-  color: white;
+  color: #FFFFFF;
+}
+
+.section {
+  padding-left: 40rpx;
+}
+.section .picker {
+  width: 400rpx;
+  height: 40rpx;
+  padding-left: 10rpx;
+  border-radius: 5rpx;
+  font-size: 23rpx;
+  background: #FFFFFF;
+  line-height: 40rpx;
 }
 
 .chooseTime {
@@ -30,11 +54,11 @@
   height: 60rpx;
   line-height: 60rpx;
   text-align: center;
-  background: white;
+  background: #FFFFFF;
 }
 
 .chooseLocation {
-  margin-top: 10rpx;
+  margin-top: 20rpx;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -47,10 +71,11 @@
 .chooseLocation view {
   width: 30%;
   height: 60rpx;
-  background: white;
+  background: #FFFFFF;
   line-height: 60rpx;
   text-align: center;
   font-size: 18rpx;
+  border-radius: 5rpx;
 }
 
 
@@ -66,25 +91,25 @@
   /* background: red; */
 }
 .name {
-  color: white;
+  color: #FFFFFF;
 }
 .inputName {
   width: 70%;
   border-radius: 5rpx;
   margin-left: 20rpx;
   padding-left: 10rpx;
-  background: white;
+  background: #FFFFFF;
 }
 .prompt {
   font-size: 20rpx;
-  color: white;
+  color: #FFFFFF;
 }
 .selectNumber {
   margin-top: 10rpx;
   /* background: red; */
 }
 .card {
-  color: white;
+  color: #FFFFFF;
 }
 .certificateType {
   display: flex;
@@ -100,7 +125,7 @@
   text-align: center;
   font-size: 25rpx;
   border-radius: 5rpx;
-  background: white;
+  background: #FFFFFF;
 }
 .certificateType .otherCard {
   margin-left: 10rpx;
@@ -109,12 +134,12 @@
   font-size: 25rpx;
   text-align: center;
   border-radius: 5rpx;
-  background: white;
+  background: #FFFFFF;
 }
 .certificateType .enterOtherCard {
   margin-top: 7rpx;
   width: 456rpx;
-  background: white;
+  background: #FFFFFF;
   border-radius: 5rpx;
 }
 .certificateType .identifyCard {
@@ -124,21 +149,23 @@
   font-size: 25rpx;
   text-align: center;
   border-radius: 5rpx;
-  background: white;
+  background: #FFFFFF;
 }
 .inputRule {
   font-size: 22rpx;
-  color: white;
+  color: #FFFFFF;
 }
 
 .phoneNumber {
   font-size: 24rpx;
-  color: white;
+  color: #FFFFFF;
 }
 .enterPhone input{
+  margin-left: 20rpx;
   width: 70%;
+  padding-left: 10rpx;
   border-radius: 5rpx;
-  background: white;
+  background: #FFFFFF;
 }
 
 
@@ -167,6 +194,8 @@
   border-radius: 5rpx;
   line-height: 66rpx;
   text-align: center;
+  background: #93bcfe;
+  color: #FFFFFF;
 }
 
 
@@ -179,10 +208,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  width: 80%;
-  /* height: 400rpx; */
-  padding-bottom: 40rpx;
-  background: purple;
+  width: 72%;
+  padding-bottom: 102rpx;
+  background: #FFFFFF;
+  border-radius: 5rpx;
 }
 .otherArea {
   font-size: 16rpx;
@@ -192,7 +221,7 @@
 .comfirmInfomation {
   display: flex;
   flex-wrap: wrap;
-  background: red;
+  margin: 10rpx 0rpx 10rpx 0rpx;
 }
 .comfirmTourist,
 .comfirmArea {
@@ -227,17 +256,19 @@
 }
 
 .promiseMessage{
-  padding: 0rpx 20rpx 0rpx 10rpx;
+  padding: 0rpx 40rpx 0rpx 40rpx;
   font-size: 16rpx;
   font-weight: bold;
 }
 
 
 .comfirmReport {
-  width: 100rpx;
+  margin-top: 20rpx;
   border: 1rpx solid blue;
-  color: blue;
-  padding: 0;
+  color: #1290FF;
+  padding:10rpx 0 10rpx 0rpx;
+  font-size: 20rpx;
+
 }
 .closeBtn {
   position: absolute;
@@ -246,4 +277,6 @@
   padding: 10rpx;
   border-radius: 50%;
   background: red;
+  width: 10rpx;
+  height: 10rpx;
 }

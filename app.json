@@ -1,14 +1,21 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/record/record"
+    "pages/record/record",
+    "pages/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  
+  "plugins": {
+    "ocr-plugin": {
+      "version": "3.0.2",
+      "provider": "wx4418e3e031e551be"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

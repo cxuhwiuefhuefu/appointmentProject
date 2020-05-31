@@ -1,15 +1,20 @@
-
 .container {
   background: #5346CD; 
 }
 
+
+
+
 /* 头部 */
+.headBg {
+  width: 100%;
+}
 .record {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding: 0 10rpx 0 10rpx;
-  font-size: 23rpx;
+  font-size: 28rpx;
   color: #FFFFFF;
 }
 
@@ -20,18 +25,12 @@
 .locationMessage {
   width: 100%;
 }
-.content {
-  padding: 20rpx 40rpx 0rpx 40rpx;
-  /* background: red; */
-}
-
 .appointmentsNumber,
 .playTime {
   padding-left: 10rpx;
-  font-size: 23rpx;
+  font-size: 28rpx;
   color: #FFFFFF;
 }
-
 .section {
   padding-left: 40rpx;
 }
@@ -40,11 +39,13 @@
   height: 40rpx;
   padding-left: 10rpx;
   border-radius: 5rpx;
-  font-size: 23rpx;
+  font-size: 28rpx;
   background: #FFFFFF;
   line-height: 40rpx;
 }
-
+.content {
+  padding: 20rpx 40rpx 0rpx 40rpx;
+}
 .chooseTime {
   display: flex;
   justify-content: space-between;
@@ -56,20 +57,17 @@
   text-align: center;
   background: #FFFFFF;
 }
-
 .chooseLocation {
   margin-top: 20rpx;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
- 
   width: 100%;
-  height: 300rpx;
+  height: 240rpx;
 }
-
 .chooseLocation view {
-  width: 30%;
+  width: 32%;
   height: 60rpx;
   background: #FFFFFF;
   line-height: 60rpx;
@@ -91,31 +89,34 @@
   /* background: red; */
 }
 .name {
+  font-size: 28rpx;
   color: #FFFFFF;
 }
 .inputName {
-  width: 70%;
+  width: 600rpx;
   border-radius: 5rpx;
   margin-left: 20rpx;
   padding-left: 10rpx;
   background: #FFFFFF;
 }
 .prompt {
+  padding-left: 20rpx;
   font-size: 20rpx;
   color: #FFFFFF;
 }
 .selectNumber {
-  margin-top: 10rpx;
+  padding-top: 20rpx;
   /* background: red; */
 }
 .card {
+  font-size: 28rpx;
   color: #FFFFFF;
 }
 .certificateType {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 80%;
+  width: 89%;
   margin-left: 20rpx;
 }
 .certificateType .chinaCard {
@@ -137,8 +138,9 @@
   background: #FFFFFF;
 }
 .certificateType .enterOtherCard {
-  margin-top: 7rpx;
-  width: 456rpx;
+  margin-top: 10rpx;
+  padding-left: 10rpx;
+  width: 600rpx;
   background: #FFFFFF;
   border-radius: 5rpx;
 }
@@ -152,17 +154,21 @@
   background: #FFFFFF;
 }
 .inputRule {
-  font-size: 22rpx;
+  padding-top: 20rpx;
+  font-size: 20rpx;
   color: #FFFFFF;
 }
 
 .phoneNumber {
-  font-size: 24rpx;
+  font-size: 28rpx;
   color: #FFFFFF;
 }
-.enterPhone input{
+.enterPhone {
+  padding-top: 20rpx;
+}
+.inputPhone{
   margin-left: 20rpx;
-  width: 70%;
+  width: 600rpx;
   padding-left: 10rpx;
   border-radius: 5rpx;
   background: #FFFFFF;
@@ -188,7 +194,7 @@
 
 .confirm {
   padding: 0rpx;
-  margin-top: 10rpx;
+  margin: 50rpx 0rpx 100rpx 0rpx;
   width: 300rpx;
   height: 66rpx;
   border-radius: 5rpx;

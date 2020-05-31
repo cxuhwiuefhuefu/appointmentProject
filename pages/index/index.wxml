@@ -3,12 +3,12 @@
 
     
     <view class="header">
-        <image src="../../images/header.jpg"></image>
+        <image class="headBg" src="../../images/header.jpg"></image>
         <view class="record" bindtap="toRecord">报备记录</view>
     </view>
 
 
-    <!-- 预约信息  -->
+    <!-- 选择预约信息  -->
     <view class="locationMessage">
       <view class="appointmentsNumber">目前所选景区可预约人数： 10</view>
       <view class="playTime">游玩时间</view>
@@ -16,7 +16,7 @@
       <view class="section">
         <picker mode="date" value="{{date}}" start="2020-01-01" end="2025-01-01" bindchange="bindDateChange">
           <view class="picker">
-            当前选择时间: {{date}}
+            当前时间为: {{date}}
           </view>
         </picker>
       </view>
@@ -67,7 +67,7 @@
 
       <view class="enterPhone"> 
         <text class="phoneNumber" >联系电话</text>
-        <input bindblur="bindPhoneBlur" />
+        <input class="inputPhone" bindblur="bindPhoneBlur" />
       </view>
 
       <button class="confirm" bind:tap="comfirm">确认预约</button>
@@ -95,7 +95,7 @@
         <view class="confirmName">姓名：{{touristName}}</view>
         <view class="comfirmPhone">联系电话：{{touristPhoneNumber}}</view>
         <view class="confirmCard">证件号码：{{touristCardNumber}} </view>
-        <view class="comfirmTime">游玩时间：{{date}}  {{periodTime}} </view>
+        <view class="comfirmTime">游玩时间：{{date}}  {{periodTime}}</view>
       </view>
       
       <view class="promiseMessage">为保障广大游客的安全，本人承诺所填写的内容真实点丶完整丶如有不实由本人承担相关法律责任</view>

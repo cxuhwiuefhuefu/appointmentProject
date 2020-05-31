@@ -1,0 +1,1 @@
+<view bind:tap="ocridcard">上传身份证</view>
